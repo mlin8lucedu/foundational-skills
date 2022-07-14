@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jeanne McClure" />
 
-<meta name="date" content="2022-07-08" />
+<meta name="date" content="2022-07-13" />
 
 <title>workflow_codealong</title>
 
@@ -1512,7 +1512,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">workflow_codealong</h1>
 <h4 class="author">Jeanne McClure</h4>
-<h4 class="date">2022-07-08</h4>
+<h4 class="date">2022-07-13</h4>
 
 </div>
 
@@ -1598,8 +1598,8 @@ we use a five step process: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhE
 <h2>1. Prepare</h2>
 <p>Load Packages</p>
 <pre class="r"><code>#Load necessary packages
-library(tidyverse)
-library(here)</code></pre>
+library(tidyverse)  #general analysis using dplr
+library(here)  #an easier way to read in data</code></pre>
 </div>
 <div id="wrangle" class="section level2">
 <h2>2. Wrangle</h2>
@@ -1622,7 +1622,7 @@ our <code>log-data.csv</code> file directly from our data folder and
 name this data set <code>time_spent</code>, to help us to quickly
 recollect what function it serves in this analysis:</p>
 <pre class="r"><code>#load with read_csv package
-time_spent &lt;- read_csv(&quot;~/RProj22/foundation_labs_2022/foundation_lab_2/data/log-data.csv&quot;)</code></pre>
+time_spent &lt;- read_csv(&quot;data/log-data.csv&quot;)</code></pre>
 <pre><code>## Rows: 716 Columns: 6
 ## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
@@ -1704,7 +1704,36 @@ survey &lt;- read_csv(here(&quot;data&quot;, &quot;survey.csv&quot;))</code></pr
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>#inspect data with view - yes the &quot;V&quot; is capitalized
-View(survey)</code></pre>
+#Don&#39;t use view() in the Markdown file
+glimpse(survey)</code></pre>
+<pre><code>## Rows: 662
+## Columns: 26
+## $ student_ID   &lt;chr&gt; &quot;43146&quot;, &quot;44638&quot;, &quot;47448&quot;, &quot;47979&quot;, &quot;48797&quot;, &quot;51943&quot;, &quot;52…
+## $ course_ID    &lt;chr&gt; &quot;FrScA-S216-02&quot;, &quot;OcnA-S116-01&quot;, &quot;FrScA-S216-01&quot;, &quot;OcnA-S…
+## $ subject      &lt;chr&gt; &quot;FrScA&quot;, &quot;OcnA&quot;, &quot;FrScA&quot;, &quot;OcnA&quot;, &quot;PhysA&quot;, &quot;FrScA&quot;, &quot;AnPh…
+## $ semester     &lt;chr&gt; &quot;S216&quot;, &quot;S116&quot;, &quot;S216&quot;, &quot;S216&quot;, &quot;S116&quot;, &quot;S216&quot;, &quot;S216&quot;, &quot;…
+## $ section      &lt;chr&gt; &quot;02&quot;, &quot;01&quot;, &quot;01&quot;, &quot;01&quot;, &quot;01&quot;, &quot;03&quot;, &quot;01&quot;, &quot;01&quot;, &quot;01&quot;, &quot;01…
+## $ int          &lt;dbl&gt; 4.2, 4.0, 4.2, 4.0, 3.8, 3.8, 3.6, 4.2, 3.8, 4.8, 4.6, 3.…
+## $ val          &lt;dbl&gt; 3.666667, 3.000000, 3.000000, 3.666667, 3.666667, 3.66666…
+## $ percomp      &lt;dbl&gt; 4.0, 3.0, 3.0, 2.5, 3.5, 3.5, 3.0, 3.0, 3.0, 4.0, 4.0, 3.…
+## $ tv           &lt;dbl&gt; 3.857143, 3.571429, 3.714286, 3.857143, 3.714286, 3.71428…
+## $ q1           &lt;dbl&gt; 4, 4, 5, 4, 4, 4, 4, 4, 5, 5, 4, 3, 4, 4, 5, 4, 4, 5, 5, …
+## $ q2           &lt;dbl&gt; 4, 2, 3, 3, 4, 4, 4, 4, 2, 4, 5, 1, 3, 2, 5, 4, 4, 4, 3, …
+## $ q3           &lt;dbl&gt; 4, 2, 3, 2, 3, 3, 4, 3, 3, 4, 4, 3, 3, 2, 4, 3, 3, 4, 4, …
+## $ q4           &lt;dbl&gt; 5, 4, 4, 4, 4, 4, 2, 4, 4, 5, 4, 4, 4, 5, 5, 4, 4, 5, 5, …
+## $ q5           &lt;dbl&gt; 4, 4, 4, 4, 4, 3, 4, 4, 4, 5, 5, 4, 4, 5, 5, 4, 4, 5, 5, …
+## $ q6           &lt;dbl&gt; 4, 4, 3, 4, 4, 3, 4, 4, 2, 3, 5, 3, 3, 3, 5, 4, 4, 4, 5, …
+## $ q7           &lt;dbl&gt; 4, 4, 3, 3, 4, 4, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 3, 5, 4, …
+## $ q8           &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 5, 4, 5, 5, 3, 4, 5, 5, 4, 5, 5, 5, …
+## $ q9           &lt;dbl&gt; 3, 3, 3, 4, 3, 4, 4, 3, 2, 3, 4, 2, 3, 1, 5, 3, 3, 4, 3, …
+## $ q10          &lt;dbl&gt; 4, 4, 4, 4, 3, 4, 4, 4, 2, 4, 5, 3, 4, 3, 5, 4, 5, 5, 5, …
+## $ date.x       &lt;dttm&gt; 2016-02-02 18:44:00, 2015-09-09 13:41:00, 2016-01-28 14:…
+## $ post_int     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 3.50, 3.75, NA, 5.00, NA, NA,…
+## $ post_uv      &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 3.666667, 2.000000, NA, 4.666…
+## $ post_tv      &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 3.571429, 3.000000, NA, 4.857…
+## $ post_percomp &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 3.5, 3.0, NA, 4.0, NA, NA, 3.…
+## $ date.y       &lt;dttm&gt; NA, NA, NA, NA, NA, NA, NA, 2016-01-02 00:41:00, 2015-10…
+## $ date         &lt;dttm&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</code></pre>
 </div>
 </div>
 <div id="b.-tidy-data" class="section level3">
@@ -1891,8 +1920,8 @@ joined_data</code></pre>
 </div>
 <div id="join-together-the-grade_book-and-log_wrangled" class="section level1">
 <h1>join together the grade_book and log_wrangled</h1>
-<p>data_to_explore &lt;- full_join(joined_data, survey, by =
-c(“student_id”, “subject”, “section”))</p>
+<p>#data_to_explore &lt;- full_join(joined_data, survey, by =
+c(“student_id”,“subject”, “section”))</p>
 <p>#Inspect data data_to_explore</p>
 <pre class="r"><code># add a join with joined data and survey</code></pre>
 <pre class="r"><code>#mutate to change variable class from double or numeric to character

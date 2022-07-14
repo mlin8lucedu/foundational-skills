@@ -44,7 +44,7 @@ library(skimr)
 
 ```{r}
 
-#skim data
+#skim data:  Presents summarized details about variables
 skim(data_to_explore)
 
 ```
@@ -76,6 +76,9 @@ If you are curious about doing more with {skimr}, check out:
 
 ggplot grammar - with layers
 
+```{r}
+library(ggplot2)
+```
 
 ##### layers - Scatter Plot
 
@@ -86,11 +89,11 @@ Basic graph
 
 ```{r}
 #layer 1: add data and aesthetics mapping 
-ggplot(data_to_explore, #<<
+ggplot(data_to_explore,
        aes(x = time_spent_hours, 
            y = proportion_earned)) +
 #layer 2: +  geom function type
-  geom_point() #<<
+  geom_point()
 ```
 
 Add **Scale ** with different color for enrollment status.
@@ -101,7 +104,7 @@ Add **Scale ** with different color for enrollment status.
 ggplot(data_to_explore, 
        aes(x = time_spent_hours, 
            y = proportion_earned,
-           color = enrollment_status)) + #<<
+           color = gender)) +
 #layer 2: +  geom function type
   geom_point()
 ```
@@ -129,10 +132,10 @@ Add the **facet** layer
 ggplot(data_to_explore, aes(x = time_spent_hours, y = proportion_earned, color = enrollment_status)) +
 #layer 2: +  geom function type
   geom_point() +
-#layer 4: add lables
-    x_lab(title="How Time Spent on Course LMS is Related to Points Earned in the Course", 
+#layer 4: add labels
+    labs(title="How Time Spent on Course LMS is Related to Points Earned in the Course", 
        x="Time Spent (Hours)",
-       y = "Proportion of Points Earned")
+       y = "Proportion of Points Earned") +
 #layer 5: add facet wrap
   facet_wrap(~ subject) 
 ```
@@ -146,7 +149,7 @@ Create a basic histogram using the 'geom_hist()' function
 ```{r hist1, message=FALSE, warning=FALSE}
 
 # Layer 1: add data and aesthetic mapping
-data_to_explore %>% #<<
+data_to_explore %>%
   ggplot(aes(x = time_spent_hours)) +
 # layer 2: add histogram geom
   geom_histogram()
@@ -160,7 +163,7 @@ Change bin size
 data_to_explore %>% 
   ggplot(aes(x = time_spent_hours)) +
 # layer 2: add histogram geom 
-# layer 3a: add bin size
+# layer 3a: add bin size (default bin size is 30)
   geom_histogram(bins = 10)
 ```
 
@@ -175,7 +178,7 @@ data_to_explore %>%
 # layer 3a: add bin size
 #layer 3b: add color
   geom_histogram(bins = 10,
-                 fill = "red", 
+                 fill = "yellow", 
                  colour = "black") 
 ```
 
@@ -202,7 +205,7 @@ Create a histogram with density plot
 data_to_explore%>%
   ggplot(aes(x=time_spent_hours)) +
   geom_histogram(aes(y=..density..), colour="black", fill="white", bins = 10)+
- geom_density(alpha=.2, fill="#FF6666") 
+ geom_density(alpha=.2, fill="#FF6666") +
   labs(title="Time Spent on LMS histogram/density plot",x="Time Spent(hours)", y = "Density")+
   theme_classic()
 ```
@@ -217,7 +220,7 @@ Make a scatterplot using the sci_classes data to examine the relationship betwee
  - Set the alpha (transparency) to 0.5.   
 
 ```{r}
-sci_classes <- read_csv("~/RProj22/foundation_labs_2022/foundation_lab_3/data/sci-online-classes.csv")
+sci_classes <- read_csv("data/sci-online-classes.csv")
 
 ggplot(data = sci_classes, mapping = aes(x = TimeSpent_hours, y = FinalGradeCEMS)) +
   geom_point(alpha=0.5) +

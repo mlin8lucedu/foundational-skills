@@ -4,7 +4,7 @@
 
 # Set from Session or...
 
-setwd("C:/Users/User/Documents/RProj22/foundation_labs_2022/foundation_lab_1")
+setwd("/Users/Meiko/Documents/GitHub/foundational-skills/foundation_lab_1")
 
 
 
@@ -35,10 +35,10 @@ library(readxl)
 
 ccss_tweets <- read_excel("data/csss_tweets.xlsx")
 view(ccss_tweets)
-head(csss_tweets, n = 5)
+head(ccss_tweets, n = 5)
 tail(ccss_tweets, n = 5)
 
-###### Excel Function ######## 
+###### Excel Function: Another way to read in Excel File ######## 
 
 ?read_excel
 
@@ -52,7 +52,7 @@ view(csss_tweets)
 ####### From Path ##########
 ############################
 
-sci_ol_classes <- read_csv("C:/Users/User/Documents/RProj22/foundation_labs_2022/foundation_lab_1/data/sci-online-classes.csv")
+sci_ol_classes <- read_csv("data/sci-online-classes.csv")
 
 sci_ol_classes
 
@@ -63,12 +63,12 @@ sci_ol_classes
 
 air_quality <- read_csv2("https://www4.stat.ncsu.edu/~online/datasets/AirQualityUCI.csv")
 air_quality
-
+head(air_quality, n = 5)
+tail(air_quality, n = 5)
 
 #########################
 ######## Stata ##########
 #########################
-
 
 library(haven)
 
