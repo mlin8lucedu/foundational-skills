@@ -458,9 +458,9 @@ set</p></li>
 of LA to “understand and improve learning and the contexts in which
 learning occurs?”</p>
 <ul>
-<li>My application of LA will tap into educators&#39; understanding of
-social and emotional learning. It will not be happening &quot;at the moment
-in which learning occurs&quot;.</li>
+<li>My application of LA will tap into educators’ understanding of
+social and emotional learning. It will not be happening “at the moment
+in which learning occurs”.</li>
 </ul></li>
 </ol>
 </div>
@@ -654,7 +654,15 @@ operator:</p></li>
 <pre class="r"><code>final_grade_info &lt;- sci_classes %&gt;%
   select(student_id, subject, semester, FinalGradeCEMS) %&gt;%
   filter(subject==&quot;OcnA&quot;) %&gt;%
-  arrange(desc(FinalGradeCEMS)) </code></pre>
+  arrange(desc(FinalGradeCEMS)) 
+head(final_grade_info)</code></pre>
+<pre><code>##   student_id subject semester FinalGradeCEMS
+## 1      66740    OcnA     S116       99.32998
+## 2      91163    OcnA     S216       97.37018
+## 3      94744    OcnA     S216       96.79732
+## 4      91818    OcnA     S116       96.46231
+## 5      90090    OcnA     S116       96.29816
+## 6      88168    OcnA     S116       95.96315</code></pre>
 <div id="knit-submit" class="section level3">
 <h3>Knit &amp; Submit</h3>
 <p>Congratulations, you’ve completed your Foundation Badge on Learning

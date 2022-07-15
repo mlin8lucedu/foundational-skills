@@ -1,9 +1,12 @@
 ---
 title: "Data Products - Badge"
 subtitle: "LASER Institute Foundation Learning Lab 4"
-author: ""
+author: "Meiko Lin"
 date: "`r Sys.Date()`"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -12,65 +15,101 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](img/dataproduct_badge.png){width="30%"}
 
+The final activity for each learning lab provides space to work with
+data and to reflect on how the concepts and techniques introduced in
+each lab might apply to your own research.
 
-The final activity for each learning lab provides space to work with data and to reflect on how the concepts and techniques introduced in each lab might apply to your own research.
+To earn a badge for each lab, you are required to respond to a set of
+prompts for two parts:
 
-To earn a badge for each lab, you are required to respond to a set of prompts for two parts: 
+-   In Part I, you will reflect on your understanding of key concepts
+    and begin to think about potential next steps for your own study.
 
--   In Part I, you will reflect on your understanding of key concepts and begin to think about potential next steps for your own study.
-
--   In Part II, you will create a simple data product in R that demonstrates your ability to apply a data analysis technique introduced in this learning lab.
+-   In Part II, you will create a simple data product in R that
+    demonstrates your ability to apply a data analysis technique
+    introduced in this learning lab.
 
 ### Part I: Reflect and Plan
 
-Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#articles)), [Google Scholar](https://scholar.google.com/) or search engine to locate a research article, presentation, or resource that applies learning analytics analysis to an educational context or topic of interest. More specifically, **locate a study that makes use of one of the data structures we learned today.** You are also welcome to select one of your research papers.
+Use the institutional library (e.g. [NCSU
+Library](https://www.lib.ncsu.edu/#articles)), [Google
+Scholar](https://scholar.google.com/) or search engine to locate a
+research article, presentation, or resource that applies learning
+analytics analysis to an educational context or topic of interest. More
+specifically, **locate a study that makes use of one of the data
+structures we learned today.** You are also welcome to select one of
+your research papers.
 
 1.  Provide an APA citation for your selected study.
 
-    -   
+    -   Cloude, E. B., Carpenter, D., Dever, D. A., Azevedo, R., &
+        Lester, J. (2021). Game-Based Learning Analytics for Supporting
+        Adolescents' Reflection. *Journal of Learning Analytics*,
+        *8*(2), 51-72.
 
-2.  What educational issue, “problem of practice,” and/or questions were addressed?
+2.  What educational issue, "problem of practice," and/or questions were
+    addressed?
 
-    -   
+    -   The study examined the role of reflection prompts on youths'
+        learning outcomes with game-based learning environments (GBLEs).
 
+3.  What made this a "good" data product?
 
-3.  What maked this a “good” data product?
+    -   The study found that reflection prompts on learning goals in
+        GBLE provides insight into youths' learning to guide
+        instructional design.
 
+4.  In your self-selected article, who were the intended beneficiaries
+    of the work and what "change ideas" might the result imply for them?
 
-    -   
+    -   The intended beneficiaries were teachers and students. The
+        implication of the study findings may encourage adoption of
+        game-based learning environment in the classrooms.
 
-4.  In your self-selected article, who were the intended beneficiaries of the work and what “change ideas” might the result imply for them?
+5.  Finally, how were modeling used to support analysis, if at all? Were
+    these practices new to you?
 
-    -   
-5. Finally,  how were modeling used to support analysis, if at all? Were these practices new to you?
-    -   
+    -   Logistic and multiple linear regression models were used to
+        asses the relationship between the quantity and quality of
+        youths' reflections and learning outcomes.
 
-Draft a new research question of guided by the the phases of the Learning Anlytics Workflow. Or use one of your current research questions.
+Draft a new research question of guided by the the phases of the
+Learning Analytics Workflow. Or use one of your current research
+questions.
 
-1.  What educational issue, “problem of practice,” and/or questions is  addressed?
+1.  What educational issue, "problem of practice," and/or questions is
+    addressed?
 
-    -   
+    -   How do educators conceptualize social and emotional learning?
 
-2.  Briefly describe how you might “polish” a data visualization for the educators you will share it with?
- 
-    -
+2.  Briefly describe how you might "polish" a data visualization for the
+    educators you will share it with?
 
-3.  How might you include education practitioners (e.g teachers, admin, policymakers, etc) to be involved in the study?
+    -   Make the visualization digestible and easy-to-read for teachers.
+        For example, we can share a Word Cloud in our social media
+        outlets with educators.
 
-    -   
+3.  How might you include education practitioners (e.g teachers, admin,
+    policymakers, etc) to be involved in the study?
+
+    -   We conducted focus group with teachers. We will share our
+        research findings via social media with teachers.
 
 ### Part II: Data Product
 
-We have completed the phases of the Learning Analytics Workflow but really have only scratched the surface with the power of tidyverse in each of these phases.
+We have completed the phases of the Learning Analytics Workflow but
+really have only scratched the surface with the power of tidyverse in
+each of these phases.
 
-Using one of the data sets provided in the data folder, your goal for this lab is to complete a data product. 
-You have two options for completing the Data Product portion:
+Using one of the data sets provided in the data folder, your goal for
+this lab is to complete a data product. You have two options for
+completing the Data Product portion:
 
-- Create a data product of your choice using a data set from the data folder 
-- Create a data product using your own data.
+-   Create a data product of your choice using a data set from the data
+    folder
+-   Create a data product using your own data.
 
-Exercise:
-- You will create a data product to share with stakeholders.
+Exercise: - You will create a data product to share with stakeholders.
 
 1.  **Select**. Communicating what one has learned involves selecting
     among those analyses that are most important and most useful to an
@@ -89,8 +128,10 @@ Exercise:
     product, and explaining the ways in which the data product helps
     answer the research question.
 
-
-I highly recommend creating a new R script in your lab-3 folder to complete this task. When your code is ready to share, use the code chunk below to share the final code for your model and answer the questions that follow.
+I highly recommend creating a new R script in your lab-3 folder to
+complete this task. When your code is ready to share, use the code chunk
+below to share the final code for your model and answer the questions
+that follow.
 
 ```{r, my-data-product}
 # YOUR FINAL CODE HERE
@@ -98,18 +139,35 @@ I highly recommend creating a new R script in your lab-3 folder to complete this
 
 ### Knit & Submit
 
-Congratulations, you've completed your Foundation Badge on Learning Analytics Data Product! Complete the following steps to submit your work for review by:
+Congratulations, you've completed your Foundation Badge on Learning
+Analytics Data Product! Complete the following steps to submit your work
+for review by:
 
-1. Change the name of the author: in the [YAML header](https://monashdatafluency.github.io/r-rep-res/yaml-header.html) at the very top of this document to your name. As noted in [Reproducible Research in R](https://monashdatafluency.github.io/r-rep-res/index.html), The YAML header controls the style and feel for knitted document but doesn’t actually display in the final output.
+1.  Change the name of the author: in the [YAML
+    header](https://monashdatafluency.github.io/r-rep-res/yaml-header.html)
+    at the very top of this document to your name. As noted in
+    [Reproducible Research in
+    R](https://monashdatafluency.github.io/r-rep-res/index.html), The
+    YAML header controls the style and feel for knitted document but
+    doesn't actually display in the final output.
 
-2. Click the yarn icon above to “knit” your data product to a [HTML](https://bookdown.org/yihui/rmarkdown/html-document.html) file that will be saved in your R Project folder.
+2.  Click the yarn icon above to "knit" your data product to a
+    [HTML](https://bookdown.org/yihui/rmarkdown/html-document.html) file
+    that will be saved in your R Project folder.
 
-3. Commit your changes in GitHub Desktop and push them to your online GitHub repository.
+3.  Commit your changes in GitHub Desktop and push them to your online
+    GitHub repository.
 
-4. Publish your HTML page the web using one of the following [publishing methods](https://rpubs.com/cathydatascience/518692):
-Publish on [RPubs](https://rpubs.com/) by clicking the “Publish” button located in the Viewer Pane when you knit your document. Note, you will need to quickly create a RPubs account. Publishing on GitHub using either [GitHub Pages](https://pages.github.com/) or the [HTML previewer](http://htmlpreview.github.io/).
+4.  Publish your HTML page the web using one of the following
+    [publishing methods](https://rpubs.com/cathydatascience/518692):
+    Publish on [RPubs](https://rpubs.com/) by clicking the "Publish"
+    button located in the Viewer Pane when you knit your document. Note,
+    you will need to quickly create a RPubs account. Publishing on
+    GitHub using either [GitHub Pages](https://pages.github.com/) or the
+    [HTML previewer](http://htmlpreview.github.io/).
 
-5. Post a new discussion on GitHub to our [Foundations Badges forum](https://github.com/orgs/laser-institute/teams/foundations/discussions/2). In your post, include a link to your published web page and `write` a short reflection highlighting one thing you learned from this lab and one thing you’d like to explore further.
-
-
-
+5.  Post a new discussion on GitHub to our [Foundations Badges
+    forum](https://github.com/orgs/laser-institute/teams/foundations/discussions/2).
+    In your post, include a link to your published web page and `write`
+    a short reflection highlighting one thing you learned from this lab
+    and one thing you'd like to explore further.

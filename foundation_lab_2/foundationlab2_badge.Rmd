@@ -34,13 +34,11 @@ Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#art
 
 3.  Briefly describe any steps of the data-intensive research workflow that detailed in your article or presentation.
 
-    -   The authors used a mixed methods approach involving social network analysis for selection and influence, and qualitative analyses of
-        conversations, individuals' professional roles, and the alignment of chat topics and chat questions with the NGSS.
+    -   The authors used a mixed methods approach involving social network analysis for selection and influence, and qualitative analyses of conversations, individuals' professional roles, and the alignment of chat topics and chat questions with the NGSS.
 
 4.  What were the key findings or conclusions? What value, if any, might education practitioners find in these results?
 
-    -   The authors found that conversations were primarily transactional, or social, and substantive, or providing opportunities for sense-making about the NGSS or for participants to transform their practice. Additionally, researchers, administrators, and teachers
-        were the most active in the network
+    -   The authors found that conversations were primarily transactional, or social, and substantive, or providing opportunities for sense-making about the NGSS or for participants to transform their practice. Additionally, researchers, administrators, and teachers were the most active in the network
 
 5.  Finally, how, if at at, were educators in your self-selected article involved prior to wrangling and analysis?
 
@@ -66,7 +64,7 @@ Draft a new research question of guided by the the phases of the Learning Analyt
 
 3.  How, if at all, will your article touch upon the application(s) of LA to "understand and improve learning and the contexts in which learning occurs?"
 
-    -   My application of LA will tap into educators\' understanding of social and emotional learning. It will not be happening \"at the moment in which learning occurs\".
+    -   My application of LA will tap into educators' understanding of social and emotional learning. It will not be happening "at the moment in which learning occurs".
 
 ### Part II: Data Product
 
@@ -166,6 +164,7 @@ final_grade_info <- sci_classes %>%
   select(student_id, subject, semester, FinalGradeCEMS) %>%
   filter(subject=="OcnA") %>%
   arrange(desc(FinalGradeCEMS)) 
+head(final_grade_info)
 
 ```
 
