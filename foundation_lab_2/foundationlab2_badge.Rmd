@@ -26,35 +26,47 @@ Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#art
 
 1.  Provide an APA citation for your selected study.
 
-    -   
+    -   Rosenberg, J. M., Reid, J. W., Dyer, E. B., Koehler, M. J., Fischer, C., & McKenna, T. J. (2020). Idle chatter or compelling conversation? The potential of the social media‐based# NGSSchat network for supporting science education reform efforts. Journal of Research in Science Teaching, 57(9), 1322-1355.
 
 2.  What educational issue, "problem of practice," and/or questions were addressed?
 
-    -   
+    -   The article aimed to answer the question: "Can we predict something we would have coded by hand?" Particularly, the authors used social media-based discussion about NGSS.
 
 3.  Briefly describe any steps of the data-intensive research workflow that detailed in your article or presentation.
 
-    -   
+    -   The authors used a mixed methods approach involving social network analysis for selection and influence, and qualitative analyses of
+        conversations, individuals' professional roles, and the alignment of chat topics and chat questions with the NGSS.
 
 4.  What were the key findings or conclusions? What value, if any, might education practitioners find in these results?
 
-    -   
+    -   The authors found that conversations were primarily transactional, or social, and substantive, or providing opportunities for sense-making about the NGSS or for participants to transform their practice. Additionally, researchers, administrators, and teachers
+        were the most active in the network
 
 5.  Finally, how, if at at, were educators in your self-selected article involved prior to wrangling and analysis?
 
-    -   
+    -   Educators engage in discussion about NGSS on social media.
 
 Draft a new research question of guided by the the phases of the Learning Analytics Workflow. Or use one of your current research questions.
 
 1.  What educational issue, "problem of practice," and/or questions is addressed??
 
-    -   
+    -   How do educators conceptualize social and emotional learning?
 
 2.  Briefly describe any steps of the data-intensive research workflow that can be detailed in your article or presentation.
 
+    -   Prepare focus group data: save the data as csv file and import it to R
+
+    -   Wrangle data: make sure data is clean and properly chunked
+
+    -   Explore data: obtain descriptive statistics about the data
+
+    -   Model data: train supervised ML model and apply on the full data set
+
+    -   Communicate data: present the findings to stakeholder
+
 3.  How, if at all, will your article touch upon the application(s) of LA to "understand and improve learning and the contexts in which learning occurs?"
 
-    -   
+    -   My application of LA will tap into educators\' understanding of social and emotional learning. It will not be happening \"at the moment in which learning occurs\".
 
 ### Part II: Data Product
 
